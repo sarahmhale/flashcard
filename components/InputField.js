@@ -37,7 +37,7 @@ export default class InputField extends Component {
                     onBlur={() => this.onBlur()}
                     onFocus={() => this.onFocus()}
                     value={this.state.text}
-                    placeholder='Name of the set' />
+                    placeholder={this.props.placeholder} />
             </View>
         );
     }

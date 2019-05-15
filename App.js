@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import CreateSet from './InputField'
+import CreateSet from './screens/CreateSet'
 
 export default class App extends React.Component {
   render() {
