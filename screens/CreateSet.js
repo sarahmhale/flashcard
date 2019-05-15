@@ -11,6 +11,7 @@ export default class CreateSet extends Component {
             <View style={styles.container}>
                 <InputField placeholder='Name of set' />
                 <Flashcard />
+                <Flashcard />
             </View>
         )
     }
@@ -18,6 +19,7 @@ export default class CreateSet extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        width: '100%'
+        width: '100%',
+        backgroundColor: '#fff'
     },
 });
