@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, TextInput } from 'react-native';
+import { COLORS } from '../themes'
 
 
 export default class InputField extends Component {
@@ -7,19 +8,19 @@ export default class InputField extends Component {
         super(props);
         this.state = {
             text: '',
-            backgroundColor: '#444444'
+            backgroundColor: COLORS.unfocused
         };
     }
 
     onFocus() {
         this.setState({
-            backgroundColor: '#F25F5C'
+            backgroundColor: COLORS.focused
         })
     }
 
     onBlur() {
         this.setState({
-            backgroundColor: '#444444'
+            backgroundColor: COLORS.unfocused
         })
     }
 
