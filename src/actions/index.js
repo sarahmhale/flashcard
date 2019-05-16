@@ -6,5 +6,6 @@ export const toggleTheme = theme => ({
 })
 
 export const addCard = () => ({
-    type: ADD_CARD
+    type: ADD_CARD,
+    text: "hej"
 })
