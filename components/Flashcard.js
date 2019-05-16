@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import InputField from './InputField'
-
+import { cardstyle } from './CardStyle'
 
 export default class Flashcard extends Component {
     render() {
         return (
-            <View style={[styles.shadow, styles.container]}>
+            <View style={[styles.container, cardstyle.shadow]}>
                 <InputField placeholder='Term' />
                 <InputField placeholder='Definition' />
             </View >)
@@ -14,22 +14,12 @@ export default class Flashcard extends Component {
 }
 
 const styles = StyleSheet.create({
-    shadow: {
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 1,
-            height: 0,
-        },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
 
-        elevation: 2,
-
-    },
     container: {
         padding: 16,
         marginTop: 16,
-        borderWidth: 0
+        borderWidth: 0,
+        backgroundColor: '#fff',
     }
 
 });

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Flashcard from '../components/Flashcard'
 import InputField from '../components/InputField';
-
+import AddFlashcard from '../components/AddFlashcard'
 
 
 export default class CreateSet extends Component {
@@ -11,7 +11,7 @@ export default class CreateSet extends Component {
             <View style={styles.container}>
                 <InputField placeholder='Name of set' />
                 <Flashcard />
-                <Flashcard />
+                <AddFlashcard />
             </View>
         )
     }
