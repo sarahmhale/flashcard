@@ -6,7 +6,8 @@ const Card = (state = [], action) => {
             return [
                 ...state,
                 {
-                    text: action.text,
+                    term: action.term,
+                    definition: action.definition,
 
                 }
             ]

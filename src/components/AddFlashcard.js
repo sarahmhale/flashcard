@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { cardstyle } from './CardStyle'
+import { connect } from 'react-redux'
+import { addCard } from '../actions'
+
+class AddFlashcard extends Component {
 
 
-export default class AddFlashcard extends Component {
+
     render() {
         return (
-            <View style={[styles.container, cardstyle.shadow]}>
-                <Ionicons name="md-add-circle" size={42} color="green" />
-            </View>)
+
+            <TouchableOpacity
+                style={[styles.container, cardstyle.shadow]}
+                onPress={() => this.props.addCard()}
+            >
+                <View>
+                    <Ionicons name="md-add-circle" size={42} color="green" />
+                </View>
+            </TouchableOpacity>
+        )
     }
 }
+const mapStateToProps = state => ({
+    color: state.Theme.colorData
+})
+
+
+const mapDispatchToProps = dispatch => ({
+    addCard: () => dispatch(addCard())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddFlashcard)
 
 const styles = StyleSheet.create({
     container: {
