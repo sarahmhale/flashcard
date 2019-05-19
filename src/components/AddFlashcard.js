@@ -25,7 +25,6 @@ class AddFlashcard extends Component {
 }
 
 
-
 const mapDispatchToProps = dispatch => ({
     addCard: () => dispatch(addCard())
 })
