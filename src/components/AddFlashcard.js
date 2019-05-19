@@ -23,16 +23,14 @@ class AddFlashcard extends Component {
         )
     }
 }
-const mapStateToProps = state => ({
-    color: state.Theme.colorData
-})
+
 
 
 const mapDispatchToProps = dispatch => ({
     addCard: () => dispatch(addCard())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddFlashcard)
+export default connect(null, mapDispatchToProps)(AddFlashcard)
 
 const styles = StyleSheet.create({
     container: {
