@@ -3,14 +3,13 @@ import { View, StyleSheet } from 'react-native';
 import Flashcard from '../components/Flashcard'
 import InputField from '../components/InputField';
 import AddFlashcard from '../components/AddFlashcard'
-import ToggleThemes from '../components/ToggleThemes';
+
 
 
 export default class CreateSet extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ToggleThemes />
                 <InputField placeholder='Name of set' />
                 <Flashcard />
                 <AddFlashcard />

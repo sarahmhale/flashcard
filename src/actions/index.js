@@ -1,11 +1,13 @@
 import { TOGGLE_THEME, ADD_CARD } from './actionTypes'
+import { bindActionCreators } from 'redux';
 
 export const toggleTheme = theme => ({
     type: TOGGLE_THEME,
     payload: theme,
 })
 
-export const addCard = () => ({
+export const addCard = card => ({
     type: ADD_CARD,
-    text: "hej"
+    term: card.term,
+    definition: card.definition
 })

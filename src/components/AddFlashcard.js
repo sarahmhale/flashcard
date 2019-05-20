@@ -6,15 +6,12 @@ import { connect } from 'react-redux'
 import { addCard } from '../actions'
 
 class AddFlashcard extends Component {
-
-
-
     render() {
         return (
 
             <TouchableOpacity
                 style={[styles.container, cardstyle.shadow]}
-                onPress={() => this.props.addCard()}
+                onPress={() => this.props.addCard({ term: 'hej', definition: 'def' })}
             >
                 <View>
                     <Ionicons name="md-add-circle" size={42} color="green" />
@@ -26,7 +23,7 @@ class AddFlashcard extends Component {
 
 
 const mapDispatchToProps = dispatch => ({
-    addCard: () => dispatch(addCard())
+    addCard: card => dispatch(addCard(card))
 })
 
 export default connect(null, mapDispatchToProps)(AddFlashcard)
