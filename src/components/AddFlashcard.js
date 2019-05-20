@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
     container: {
         paddingTop: 24,
         paddingBottom: 24,
-        marginTop: 24,
         borderWidth: 0,
         backgroundColor: '#fff',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: 16,
     }
 });

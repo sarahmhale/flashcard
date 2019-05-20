@@ -17,7 +17,10 @@ const styles = StyleSheet.create({
 
     container: {
         padding: 16,
+        marginRight: 16,
+        marginLeft: 16,
         marginTop: 16,
+
         borderWidth: 0,
         backgroundColor: '#fff',
     }

@@ -33,9 +33,9 @@ export default class InputField extends Component {
         return (
             <View style={{
                 borderBottomColor: this.state.backgroundColor,
-                borderBottomWidth: 3,
-                height: 40,
-                width: '100%'
+                borderBottomWidth: 2,
+                height: 30,
+                margin: 16
             }}
             >
                 <TextInput
