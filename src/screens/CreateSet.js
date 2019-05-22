@@ -3,7 +3,9 @@ import {
     View,
     StyleSheet,
     FlatList,
+    Keyboard,
 } from 'react-native';
+
 
 import { connect } from 'react-redux'
 import Flashcard from '../components/Flashcard'
@@ -11,16 +13,36 @@ import InputField from '../components/InputField';
 import AddFlashcard from '../components/AddFlashcard'
 
 
-
 class CreateSet extends Component {
+
+    componentDidMount() {
+        this.keyboardDidShowListener = Keyboard.addListener(
+            'keyboardDidShow',
+            this._keyboardDidShow,
+        );
+        this.keyboardDidHideListener = Keyboard.addListener(
+            'keyboardDidHide',
+            this._keyboardDidHide,
+        );
+    }
+
+    componentWillUnmount() {
+        this.keyboardDidShowListener.remove();
+        this.keyboardDidHideListener.remove();
+    }
+
+    _keyboardDidShow = (event) => {
+        console.log("show")
+    }
+    _keyboardDidHide = () => {
+        console.log("hide")
+    }
+
     _keyExtractor = (item, index) => 'key' + index;
 
     _renderItem = ({ item }) => (
         <Flashcard
             id={item.id}
-        // onPressItem={this._onPressItem}
-        //selected={!!this.state.selected.get(item.id)}
-        // title={item.title}
         />
     );
     render() {

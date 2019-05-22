@@ -16,7 +16,7 @@ export default class InputField extends Component {
 
     onFocus() {
         this.setState({
-            backgroundColor: COLORS.focused.hexCode
+            backgroundColor: COLORS.focused
         })
 
         store.dispatch(toggleTheme(COLORS.focused))
@@ -24,7 +24,7 @@ export default class InputField extends Component {
 
     onBlur() {
         this.setState({
-            backgroundColor: COLORS.unfocused.hexCode
+            backgroundColor: COLORS.unfocused
         })
         store.dispatch(toggleTheme(COLORS.unfocused))
     }

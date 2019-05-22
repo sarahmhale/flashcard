@@ -1,6 +1,6 @@
 export const COLORS = {
-    focused: { name: 'focused', hexCode: '#F25F5C' },
-    unfocused: { name: 'unfocused', hexCode: '#444' },
+    focused: '#F25F5C',
+    unfocused: '#444',
     dark: '#444'
 }
 
