@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux'
 import InputField from './InputField'
 import { cardstyle } from './CardStyle'
-import { COLORS } from '../themes'
 import { deleteCard } from '../actions'
+import { Delete } from './Delete';
+
 
 class Flashcard extends Component {
 
@@ -13,17 +13,7 @@ class Flashcard extends Component {
     render() {
         return (
             <View style={[styles.container, cardstyle.shadow]}>
-
-                <TouchableOpacity
-                    onPress={() => {
-                        return this.props.deleteCard(this.props.index)
-                    }}
-                >
-                    <Ionicons
-                        style={styles.icon}
-                        name="md-close" size={24}
-                        color={COLORS.dark} />
-                </TouchableOpacity>
+                <Delete deleteCard={this.props.deleteCard} index={this.props.index}></Delete>
 
                 <InputField placeholder='Term' />
                 <InputField placeholder='Definition' />
@@ -37,7 +27,7 @@ const mapDispatchToProps = dispatch => ({
 
 export default connect(null, mapDispatchToProps)(Flashcard)
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
 
     container: {
         padding: 8,
