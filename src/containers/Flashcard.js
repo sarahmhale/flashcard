@@ -9,7 +9,6 @@ import { Delete } from '../components/Buttons/Delete';
 
 class Flashcard extends Component {
 
-
     render() {
         return (
             <View style={[styles.container, cardstyle.shadow]}>

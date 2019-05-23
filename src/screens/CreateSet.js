@@ -15,32 +15,32 @@ import AddFlashcard from '../components/AddFlashcard'
 
 class CreateSet extends Component {
 
-    componentDidMount() {
-        this.keyboardDidShowListener = Keyboard.addListener(
-            'keyboardDidShow',
-            this._keyboardDidShow,
-        );
-        this.keyboardDidHideListener = Keyboard.addListener(
-            'keyboardDidHide',
-            this._keyboardDidHide,
-        );
-    }
+    // componentDidMount() {
+    //     this.keyboardDidShowListener = Keyboard.addListener(
+    //         'keyboardDidShow',
+    //         this._keyboardDidShow,
+    //     );
+    //     this.keyboardDidHideListener = Keyboard.addListener(
+    //         'keyboardDidHide',
+    //         this._keyboardDidHide,
+    //     );
+    // }
 
-    componentWillUnmount() {
-        this.keyboardDidShowListener.remove();
-        this.keyboardDidHideListener.remove();
-    }
+    // componentWillUnmount() {
+    //     this.keyboardDidShowListener.remove();
+    //     this.keyboardDidHideListener.remove();
+    // }
 
-    _keyboardDidShow = (event) => {
-        console.log("show")
-    }
-    _keyboardDidHide = () => {
-        console.log("hide")
-    }
+    // _keyboardDidShow = (event) => {
+    //     console.log("show")
+    // }
+    // _keyboardDidHide = () => {
+    //     console.log("hide")
+    // }
 
     _keyExtractor = (item, index) => "key" + index;
 
-    _renderItem = ({ item, index }) => {
+    _renderItem = ({ index }) => {
         return (
             <Flashcard
                 index={index}
@@ -50,8 +50,6 @@ class CreateSet extends Component {
     render() {
         return (
             <View style={styles.container}>
-
-
                 <FlatList
                     data={this.props.cards}
                     extraData={this.state}
@@ -59,7 +57,6 @@ class CreateSet extends Component {
                     renderItem={this._renderItem}
                     ListHeaderComponent={<InputField placeholder='Name of set' />}
                     ListFooterComponent={<AddFlashcard />}
-
                 />
             </View>
         )

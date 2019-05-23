@@ -8,15 +8,18 @@ export class Delete extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
-        return (<TouchableOpacity onPress={() => {
-            return this.props.deleteCard(this.props.index);
-        }}>
-            <Ionicons style={styles.icon} name="md-close" size={24} color={COLORS.dark} />
-        </TouchableOpacity>);
+        return (
+            <TouchableOpacity onPress={() => this.props.deleteCard(this.props.index)}>
+                <Ionicons
+                    style={styles.icon}
+                    name="md-close"
+                    size={24}
+                    color={COLORS.dark} />
+            </TouchableOpacity>);
     }
 }
-
 
 export const styles = StyleSheet.create({
     icon: {
@@ -24,5 +27,4 @@ export const styles = StyleSheet.create({
         paddingRight: 16,
         paddingTop: 16
     }
-
 });

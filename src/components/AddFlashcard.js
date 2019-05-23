@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
+import { COLORS } from '../themes'
 import { Ionicons } from '@expo/vector-icons';
 import { cardstyle } from './CardStyle'
 import { connect } from 'react-redux'
@@ -14,8 +15,9 @@ class AddFlashcard extends Component {
                 onPress={() => this.props.addCard({ term: '', definition: '' })}
             >
                 <View>
-                    <Ionicons name="md-add-circle" size={42} color="green" />
+                    <Ionicons name="md-add-circle" size={42} color={COLORS.focused} />
                 </View>
+
             </TouchableOpacity>
         )
     }
