@@ -10,7 +10,7 @@ import {
 import { connect } from 'react-redux'
 import Flashcard from '../containers/Flashcard'
 import InputField from '../components/InputField';
-import AddFlashcard from '../components/AddFlashcard'
+import NewCard from '../components/NewCard'
 
 
 class CreateSet extends Component {
@@ -56,7 +56,7 @@ class CreateSet extends Component {
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
                     ListHeaderComponent={<InputField placeholder='Name of set' />}
-                    ListFooterComponent={<AddFlashcard />}
+                    ListFooterComponent={<NewCard />}
                 />
             </View>
         )

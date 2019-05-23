@@ -1,8 +1,7 @@
-import store from '../store'
 import React, { Component } from 'react';
 import { View, TextInput } from 'react-native';
 import { COLORS } from '../themes'
-import { toggleTheme } from '../actions'
+
 
 
 export default class InputField extends Component {
@@ -18,14 +17,13 @@ export default class InputField extends Component {
         this.setState({
             backgroundColor: COLORS.focused
         })
-
-        store.dispatch(toggleTheme(COLORS.focused))
     }
 
     onBlur() {
         this.setState({
             backgroundColor: COLORS.unfocused
         })
+
     }
 
     render() {
