@@ -1,4 +1,4 @@
-import { TOGGLE_THEME, ADD_CARD } from './actionTypes'
+import { TOGGLE_THEME, ADD_CARD, DELETE_CARD } from './actionTypes'
 //import { bindActionCreators } from 'redux';
 
 export const toggleTheme = theme => ({
@@ -13,6 +13,7 @@ export const addCard = card => ({
 })
 
 
-export const deleteCard = card => ({
+export const deleteCard = index => ({
     type: DELETE_CARD,
+    index: index
 })

@@ -38,13 +38,15 @@ class CreateSet extends Component {
         console.log("hide")
     }
 
-    _keyExtractor = (item, index) => 'key' + index;
+    _keyExtractor = (item, index) => "key" + index;
 
-    _renderItem = ({ item }) => (
-        <Flashcard
-            id={item.id}
-        />
-    );
+    _renderItem = ({ item, index }) => {
+        return (
+            <Flashcard
+                index={index}
+            />
+        );
+    }
     render() {
         return (
             <View style={styles.container}>
