@@ -1,8 +1,8 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS } from '../themes';
-import { styles } from './Flashcard';
+import { COLORS } from '../../themes';
+
 
 export class Delete extends React.Component {
     constructor(props) {
@@ -16,3 +16,13 @@ export class Delete extends React.Component {
         </TouchableOpacity>);
     }
 }
+
+
+export const styles = StyleSheet.create({
+    icon: {
+        alignSelf: 'flex-end',
+        paddingRight: 16,
+        paddingTop: 16
+    }
+
+});

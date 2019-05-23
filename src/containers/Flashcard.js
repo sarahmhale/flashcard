@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux'
-import InputField from './InputField'
-import { cardstyle } from './CardStyle'
+import InputField from '../components/InputField'
+import { cardstyle } from '../components/CardStyle'
 import { deleteCard } from '../actions'
-import { Delete } from './Delete';
+import { Delete } from '../components/Buttons/Delete';
 
 
 class Flashcard extends Component {
@@ -14,7 +14,6 @@ class Flashcard extends Component {
         return (
             <View style={[styles.container, cardstyle.shadow]}>
                 <Delete deleteCard={this.props.deleteCard} index={this.props.index}></Delete>
-
                 <InputField placeholder='Term' />
                 <InputField placeholder='Definition' />
             </View >)
@@ -38,10 +37,6 @@ export const styles = StyleSheet.create({
         borderWidth: 0,
         backgroundColor: '#fff',
     },
-    icon: {
-        alignSelf: 'flex-end',
-        paddingRight: 16,
-        paddingTop: 16
-    }
+
 
 });

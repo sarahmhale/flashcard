@@ -8,7 +8,7 @@ import {
 
 
 import { connect } from 'react-redux'
-import Flashcard from '../components/Flashcard'
+import Flashcard from '../containers/Flashcard'
 import InputField from '../components/InputField';
 import AddFlashcard from '../components/AddFlashcard'
 

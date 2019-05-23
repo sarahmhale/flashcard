@@ -26,7 +26,6 @@ export default class InputField extends Component {
         this.setState({
             backgroundColor: COLORS.unfocused
         })
-        store.dispatch(toggleTheme(COLORS.unfocused))
     }
 
     render() {
