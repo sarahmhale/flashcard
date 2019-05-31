@@ -9,7 +9,7 @@ export const addCard = card => ({
     type: ADD_CARD,
 })
 
-export const update_card = action => ({
+export const updateCard = action => ({
     type: UPDATE_CARD,
     index: action.index,
     item: { term: action.term, definition: action.definition }

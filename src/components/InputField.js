@@ -24,6 +24,10 @@ export default class InputField extends Component {
             backgroundColor: COLORS.unfocused
         })
 
+        this.props.update({ term: this.state.text })
+
+        console.log(this.state)
+
     }
 
     render() {

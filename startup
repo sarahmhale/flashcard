@@ -1,0 +1,5 @@
+#!/bin/bash
+code .
+open "rndebugger://set-debugger-loc?host=localhost&port=19001"
+cd flashcard
+npm start
