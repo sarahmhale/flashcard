@@ -9,7 +9,6 @@ const Card = (state = [], action) => {
             newState.splice(action.index, 1);
             return newState;
         case UPDATE_CARD:
-            console.log("state", state)
             return updateObjectInArray(state, action)
         default:
             return state
@@ -19,9 +18,10 @@ const Card = (state = [], action) => {
 export default Card
 
 const updateObjectInArray = (array, action) => {
-    console.log(array);
+
 
     return array.map((item, index) => {
+
         if (index !== action.index) {
             // This isn't the item we care about - keep it as-is
             return item

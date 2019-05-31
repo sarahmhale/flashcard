@@ -11,22 +11,27 @@ class Flashcard extends Component {
     constructor(props) {
         super(props);
         this.state = { term: '', definition: '' };
+
+        this.updateTerm = this.updateTerm.bind(this);
+        this.updateDefinition = this.updateDefinition.bind(this);
     }
 
     updateTerm(term) {
-        setState = { term: term }
-        this.props.updateCard(this.state)
+        this.setState({ term: term });
+        this.props.updateCard({ term: term, definition: this.state.definition, index: this.props.index })
+    }
 
-    }
     updateDefinition(def) {
-        setState = { definition: def }
+        this.setState({ definition: def });
+        this.props.updateCard({ term: this.state.term, definition: def, index: this.props.index })
     }
+
     render() {
         return (
             <View style={[styles.container, cardstyle.shadow]}>
                 <Delete deleteCard={this.props.deleteCard} index={this.props.index}></Delete>
-                <InputField placeholder='Term' update={this.props.updateCard} />
-                <InputField placeholder='Definition' update={this.props.updateCard} />
+                <InputField placeholder='Term' update={this.updateTerm} />
+                <InputField placeholder='Definition' update={this.updateDefinition} />
             </View >)
     }
 }
