@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text, TextInput } from 'react-native';
 import { connect } from 'react-redux'
 import InputField from '../components/InputField'
 import { cardstyle } from '../components/CardStyle'
 import { deleteCard, updateCard } from '../actions'
 import { Delete } from '../components/Buttons/Delete';
+import { COLORS } from '../themes'
+
 
 
 class Flashcard extends Component {
     constructor(props) {
         super(props);
-        this.state = { term: '', definition: '' };
+
+        this.state = {
+            term: props.term,
+            definition: ''
+        };
 
         this.updateTerm = this.updateTerm.bind(this);
         this.updateDefinition = this.updateDefinition.bind(this);
+    }
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        if (prevState.term !== nextProps.term) {
+            return {
+
+                term: nextProps.term
+            };
+        } return null;
     }
 
     updateTerm(term) {
@@ -29,9 +44,19 @@ class Flashcard extends Component {
     render() {
         return (
             <View style={[styles.container, cardstyle.shadow]}>
+                <Text>{this.props.term}</Text>
                 <Delete deleteCard={this.props.deleteCard} index={this.props.index}></Delete>
-                <InputField placeholder='Term' update={this.updateTerm} />
-                <InputField placeholder='Definition' update={this.updateDefinition} />
+
+                <InputField
+                    placeholder='Term'
+                    value={this.state.term}
+                    update={this.updateTerm}
+                />
+                <InputField
+                    placeholder='Definition'
+                    value={this.state.definition}
+                    update={this.updateDefinition}
+                />
             </View >)
     }
 }
@@ -54,6 +79,11 @@ export const styles = StyleSheet.create({
         borderWidth: 0,
         backgroundColor: '#fff',
     },
+    inputField: {
+        borderBottomWidth: 2,
+        height: 30,
+        margin: 16
+    }
 
 
 });

@@ -40,10 +40,12 @@ class CreateSet extends Component {
 
     _keyExtractor = (item, index) => "key" + index;
 
-    _renderItem = ({ index }) => {
+    _renderItem = ({ item, index }) => {
         return (
             <Flashcard
                 index={index}
+                term={item.term}
+                definition={item.definition}
             />
         );
     }
