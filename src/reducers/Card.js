@@ -15,6 +15,13 @@ const Card = (state = [], action) => {
     }
 }
 
+//TODO: Get the id card
+// const getIncompleteTodos = (state, index) => {
+//     return state.todos.filter((todo) => {
+//         return !todo.completed
+//     });
+// }
+
 export default Card
 
 const updateObjectInArray = (array, action) => {

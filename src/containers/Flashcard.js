@@ -15,7 +15,7 @@ class Flashcard extends Component {
 
         this.state = {
             term: props.term,
-            definition: ''
+            definition: props.definition
         };
 
         this.updateTerm = this.updateTerm.bind(this);
@@ -23,9 +23,9 @@ class Flashcard extends Component {
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
-        if (prevState.term !== nextProps.term) {
+        if (prevState !== nextProps) {
             return {
-
+                definition: nextProps.definition,
                 term: nextProps.term
             };
         } return null;
@@ -44,7 +44,6 @@ class Flashcard extends Component {
     render() {
         return (
             <View style={[styles.container, cardstyle.shadow]}>
-                <Text>{this.props.term}</Text>
                 <Delete deleteCard={this.props.deleteCard} index={this.props.index}></Delete>
 
                 <InputField
@@ -60,6 +59,14 @@ class Flashcard extends Component {
             </View >)
     }
 }
+{/* 
+const mapStateToProps = (state, index) => {
+    const { index } = index
+    const card = getCardById(state, id)
+
+    // component receives additionally:
+    return { card }
+} */}
 
 const mapDispatchToProps = dispatch => ({
     deleteCard: index => dispatch(deleteCard(index)),

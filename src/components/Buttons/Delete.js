@@ -25,6 +25,6 @@ export const styles = StyleSheet.create({
     icon: {
         alignSelf: 'flex-end',
         paddingRight: 16,
-        paddingTop: 16
+        paddingTop: 16,
     }
 });

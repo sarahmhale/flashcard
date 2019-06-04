@@ -17,7 +17,6 @@ import NewCard from '../components/NewCard'
 
 class CreateSet extends Component {
 
-
     _keyExtractor = (item, index) => "key" + index;
 
     _renderItem = ({ item, index }) => {
@@ -29,7 +28,6 @@ class CreateSet extends Component {
             />
         );
     }
-
 
     render() {
         return (
