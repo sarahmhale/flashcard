@@ -4,15 +4,6 @@ import {
     StyleSheet,
     FlatList,
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-
-
-
-import { connect } from 'react-redux'
-import Flashcard from '../containers/Flashcard'
-import InputField from '../components/InputField';
-import NewCard from '../components/NewCard'
-
 
 
 class CreateSet extends Component {
@@ -21,26 +12,22 @@ class CreateSet extends Component {
 
     _renderItem = ({ item, index }) => {
         return (
-            <Flashcard
-                index={index}
-                term={item.term}
-                definition={item.definition}
-            />
+            <View>Sets</View>
         );
     }
 
     render() {
         return (
-            <KeyboardAwareScrollView style={styles.container}>
+            <View style={styles.container}>
                 <FlatList
-                    data={this.props.cards}
+                    data={this.props.sets}
                     extraData={this.state}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
                     ListHeaderComponent={<InputField placeholder='Name of set' />}
                     ListFooterComponent={<NewCard />}
                 />
-            </KeyboardAwareScrollView>
+            </View>
 
         )
     }
@@ -48,7 +35,7 @@ class CreateSet extends Component {
 
 
 const mapStateToProps = state => ({
-    cards: state.Card
+    sets: state.Set
 })
 
 export default connect(mapStateToProps)(CreateSet)
