@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     FlatList,
+    Platform,
+    KeyboardAvoidingView
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
@@ -27,7 +29,7 @@ class CreateSet extends Component {
 
     render() {
         return (
-            <KeyboardAwareScrollView style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior={'padding'}>
                 <FlatList
                     data={this.props.cards}
                     extraData={this.state}
@@ -36,7 +38,7 @@ class CreateSet extends Component {
                     ListHeaderComponent={<InputField placeholder='Name of set' />}
                     ListFooterComponent={<NewCard />}
                 />
-            </KeyboardAwareScrollView>
+            </KeyboardAvoidingView>
 
         )
     }

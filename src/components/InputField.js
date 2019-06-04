@@ -36,7 +36,9 @@ export default class InputField extends Component {
                 borderBottomColor: this.state.backgroundColor,
                 borderBottomWidth: 2,
                 height: 30,
-                margin: 16
+                margin: 16,
+                marginBottom: 3,
+
             }}
                 onChangeText={(text) => this.setState({ text })}
                 onBlur={() => this.onBlur()}

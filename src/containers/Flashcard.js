@@ -51,11 +51,14 @@ class Flashcard extends Component {
                     value={this.state.term}
                     update={this.updateTerm}
                 />
+                <Text style={styles.text}>Term</Text>
+
                 <InputField
                     placeholder='Definition'
                     value={this.state.definition}
                     update={this.updateDefinition}
                 />
+                <Text style={styles.text}>Definition</Text>
             </View >)
     }
 }
@@ -86,10 +89,12 @@ export const styles = StyleSheet.create({
         borderWidth: 0,
         backgroundColor: '#fff',
     },
-    inputField: {
-        borderBottomWidth: 2,
-        height: 30,
-        margin: 16
+    text: {
+        marginLeft: 16,
+
+        color: COLORS.dark,
+        fontSize: 12
+
     }
 
 
