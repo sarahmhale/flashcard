@@ -3,10 +3,11 @@ import {
     View,
     StyleSheet,
     FlatList,
+    Text
 } from 'react-native';
 
 
-class CreateSet extends Component {
+class StyleSheet extends Component {
 
     _keyExtractor = (item, index) => "key" + index;
 
@@ -24,8 +25,7 @@ class CreateSet extends Component {
                     extraData={this.state}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
-                    ListHeaderComponent={<InputField placeholder='Name of set' />}
-                    ListFooterComponent={<NewCard />}
+                    ListFooterComponent={<Text>New set</Text>}
                 />
             </View>
 
@@ -38,7 +38,7 @@ const mapStateToProps = state => ({
     sets: state.Set
 })
 
-export default connect(mapStateToProps)(CreateSet)
+export default connect(mapStateToProps)(Set)
 
 const styles = StyleSheet.create({
     container: {

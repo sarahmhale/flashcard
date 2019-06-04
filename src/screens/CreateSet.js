@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import {
-    View,
     StyleSheet,
     FlatList,
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 
-
 import { connect } from 'react-redux'
 import Flashcard from '../containers/Flashcard'
 import InputField from '../components/InputField';
 import NewCard from '../components/NewCard'
-
-
 
 class CreateSet extends Component {
 
