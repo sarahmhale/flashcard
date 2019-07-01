@@ -5,11 +5,6 @@ import {
     UPDATE_CARD,
 } from './actionTypes'
 
-export const toggleTheme = theme => ({
-    type: TOGGLE_THEME,
-    payload: theme,
-})
-
 export const addCard = card => ({
     type: ADD_CARD,
 })
