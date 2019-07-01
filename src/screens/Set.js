@@ -5,9 +5,10 @@ import {
     FlatList,
     Text
 } from 'react-native';
+import { connect } from 'react-redux'
 
 
-class StyleSheet extends Component {
+class Set extends Component {
 
     _keyExtractor = (item, index) => "key" + index;
 

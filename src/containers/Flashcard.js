@@ -31,6 +31,7 @@ class Flashcard extends Component {
         } return null;
     }
 
+
     updateTerm(term) {
         this.setState({ term: term });
         this.props.updateCard({ term: term, definition: this.state.definition, index: this.props.index })
