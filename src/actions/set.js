@@ -6,7 +6,8 @@ import {
 
 export const addSet = set => ({
     type: ADD_SET,
-    id: set.id
+    id: set.id,
+    cards: []
 })
 
 // export const updateSet = action => ({

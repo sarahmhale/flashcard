@@ -15,7 +15,7 @@ class Set extends Component {
 
     _renderItem = ({ item, index }) => {
         return (
-            <View>Sets</View>
+            <View><Text>Sets</Text></View>
         );
     }
 
@@ -37,7 +37,7 @@ class Set extends Component {
 
 
 const mapStateToProps = state => ({
-    sets: state.Set
+    sets: state.Sets
 })
 
 export default connect(mapStateToProps)(Set)
