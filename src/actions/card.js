@@ -1,5 +1,4 @@
 import {
-    TOGGLE_THEME,
     ADD_CARD,
     DELETE_CARD,
     UPDATE_CARD,

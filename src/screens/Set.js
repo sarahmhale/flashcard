@@ -6,6 +6,7 @@ import {
     Text
 } from 'react-native';
 import { connect } from 'react-redux'
+import NewSet from '../components/NewSet'
 
 
 class Set extends Component {
@@ -26,7 +27,7 @@ class Set extends Component {
                     extraData={this.state}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
-                    ListFooterComponent={<Text>New set</Text>}
+                    ListFooterComponent={<NewSet />}
                 />
             </View>
 
