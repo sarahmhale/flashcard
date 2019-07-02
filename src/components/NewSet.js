@@ -6,13 +6,19 @@ import { cardstyle } from './CardStyle'
 import { connect } from 'react-redux'
 import { addSet } from '../actions'
 
+import { withNavigation } from 'react-navigation';
+
 class NewSet extends Component {
     render() {
         return (
 
             <TouchableOpacity
                 style={[styles.container, cardstyle.shadow]}
-                onPress={() => this.props.addSet({ id: '1' })}
+                onPress={() => {
+                    this.props.addSet({ id: '1' })
+                    this.props.navigation.navigate('CreateCards')
+                }
+                }
             >
                 <View>
                     <Ionicons name="md-add-circle" size={42} color={COLORS.focused} />
@@ -28,7 +34,7 @@ const mapDispatchToProps = dispatch => ({
     addSet: set => dispatch(addSet(set))
 })
 
-export default connect(null, mapDispatchToProps)(NewSet)
+export default withNavigation(connect(null, mapDispatchToProps)(NewSet))
 
 const styles = StyleSheet.create({
     container: {
