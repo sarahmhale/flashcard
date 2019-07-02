@@ -1,9 +1,14 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import SetScreen from './src/screens/Set'
-const AppNavigator = createStackNavigator({
-    Home: {
-        screen: SetScreen
+import HomeScreen from './src/screens/HomeScreen'
+import CreateSet from './src/screens/CreateSet'
+
+const AppNavigator = createStackNavigator(
+    {
+        Home: HomeScreen,
+        CreateCards: CreateSet
+    }, {
+        initialRouteName: "Home"
     }
-});
+);
 
 export const AppContainer = createAppContainer(AppNavigator);

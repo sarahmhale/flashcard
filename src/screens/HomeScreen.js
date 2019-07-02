@@ -9,7 +9,7 @@ import { connect } from 'react-redux'
 import NewSet from '../components/NewSet'
 
 
-class Set extends Component {
+class HomeScreen extends Component {
 
     _keyExtractor = (item, index) => "key" + index;
 
@@ -40,7 +40,7 @@ const mapStateToProps = state => ({
     sets: state.Sets
 })
 
-export default connect(mapStateToProps)(Set)
+export default connect(mapStateToProps)(HomeScreen)
 
 const styles = StyleSheet.create({
     container: {
