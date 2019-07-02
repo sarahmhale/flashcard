@@ -5,13 +5,12 @@ import {
     Platform,
     KeyboardAvoidingView
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
-
 
 import { connect } from 'react-redux'
 import Flashcard from '../containers/Flashcard'
 import InputField from '../components/InputField';
 import NewCard from '../components/NewCard'
+
 
 class CreateSet extends Component {
 
@@ -28,6 +27,10 @@ class CreateSet extends Component {
     }
 
     render() {
+        const { navigation } = this.props;
+        const itemId = navigation.getParam('id', 'NO-ID');
+
+
         return (
             <KeyboardAvoidingView style={styles.container} behavior={'padding'}>
                 <FlatList
@@ -36,7 +39,7 @@ class CreateSet extends Component {
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
                     ListHeaderComponent={<InputField placeholder='Name of set' />}
-                    ListFooterComponent={<NewCard />}
+                    ListFooterComponent={<NewCard id={itemId} />}
                 />
             </KeyboardAvoidingView>
 

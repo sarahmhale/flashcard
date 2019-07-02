@@ -4,8 +4,9 @@ import {
     UPDATE_CARD,
 } from './actionTypes'
 
-export const addCard = card => ({
+export const addCard = (card) => ({
     type: ADD_CARD,
+    id: card.id
 })
 
 export const updateCard = action => ({
