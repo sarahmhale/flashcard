@@ -1,22 +1,17 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import CreateSet from './src/screens/CreateSet'
 import { Provider } from 'react-redux'
-import SetScreen from './src/screens/Set'
+import { AppContainer } from './AppNavigator'
 
 import store from './src/store'
 
-
 export default class App extends React.Component {
   render() {
+
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <SetScreen />
-          {/* <CreateSet /> */}
-        </View>
-      </Provider>
-    );
+        <AppContainer />
+      </Provider>);
   }
 }
 
