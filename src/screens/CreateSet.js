@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     FlatList,
-    Platform,
     KeyboardAvoidingView
 } from 'react-native';
 
@@ -10,7 +9,6 @@ import { connect } from 'react-redux'
 import Flashcard from '../containers/Flashcard'
 import InputField from '../components/InputField';
 import NewCard from '../components/NewCard'
-
 
 class CreateSet extends Component {
 
@@ -29,12 +27,12 @@ class CreateSet extends Component {
     render() {
         const { navigation } = this.props;
         const itemId = navigation.getParam('id', 'NO-ID');
-
+        console.log(this.props.sets[itemId]);
 
         return (
             <KeyboardAvoidingView style={styles.container} behavior={'padding'}>
                 <FlatList
-                    data={this.props.cards}
+                    data={this.props.sets[itemId]}
                     extraData={this.state}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
@@ -49,7 +47,7 @@ class CreateSet extends Component {
 
 
 const mapStateToProps = state => ({
-    cards: state.Card
+    sets: state.Sets
 })
 
 export default connect(mapStateToProps)(CreateSet)

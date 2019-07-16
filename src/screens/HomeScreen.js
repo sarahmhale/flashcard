@@ -9,6 +9,7 @@ import { connect } from 'react-redux'
 import NewSet from '../components/NewSet'
 
 
+
 class HomeScreen extends Component {
 
     _keyExtractor = (item, index) => "key" + index;
@@ -23,7 +24,7 @@ class HomeScreen extends Component {
         return (
             <View style={styles.container}>
                 <FlatList
-                    data={this.props.sets}
+                    data={Object.keys(this.props.sets)}
                     extraData={this.state}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}

@@ -1,18 +1,21 @@
-import { ADD_SET, DELETE_SET, UPDATE_SET } from "../actions/actionTypes";
+import Card from './Card'
 
 const Sets = (state = [], action) => {
-    switch (action.type) {
-        case ADD_SET:
-            return state.concat([{ id: action.id }])
-        // case DELETE_SET:
-        //     let newState = [...state];
-        //     newState.splice(action.index, 1);
-        //     return newState;
-        // case UPDATE_CARD:
-        //     return updateObjectInArray(state, action)
-        default:
-            return state
+    if (typeof action.id !== 'undefined') {
+        return {
+            ...state,
+            [action.id]: Card(state[action.id], action)
+        }
+
     }
+    return state
+    // switch (action.type) {
+    //     case ADD_SET:
+    //         return state.concat([{ id: action.id }])
+
+    //     default:
+    //         return state
+    // }
 }
 
 export default Sets
