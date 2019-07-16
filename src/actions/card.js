@@ -16,7 +16,8 @@ export const updateCard = action => ({
 })
 
 
-export const deleteCard = index => ({
+export const deleteCard = (index, id) => ({
     type: DELETE_CARD,
-    index: index
+    index: index,
+    id: id
 })

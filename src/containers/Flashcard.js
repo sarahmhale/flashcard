@@ -43,9 +43,10 @@ class Flashcard extends Component {
     }
 
     render() {
+        console.log(this.props.id)
         return (
             <View style={[styles.container, cardstyle.shadow]}>
-                <Delete deleteCard={this.props.deleteCard} index={this.props.index}></Delete>
+                <Delete deleteCard={() => this.props.deleteCard(this.props.index, this.props.id)}></Delete>
 
                 <InputField
                     placeholder='Term'
@@ -63,17 +64,9 @@ class Flashcard extends Component {
             </View >)
     }
 }
-{/* 
-const mapStateToProps = (state, index) => {
-    const { index } = index
-    const card = getCardById(state, id)
-
-    // component receives additionally:
-    return { card }
-} */}
 
 const mapDispatchToProps = dispatch => ({
-    deleteCard: index => dispatch(deleteCard(index)),
+    deleteCard: (index, id) => dispatch(deleteCard(index, id)),
     updateCard: item => dispatch(updateCard(item))
 })
 
