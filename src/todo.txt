@@ -1,0 +1,3 @@
+Problem med uppdatera text på kort 
+Skapa en kortstil
+titel på kortet

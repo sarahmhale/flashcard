@@ -43,7 +43,7 @@ class Flashcard extends Component {
     }
 
     render() {
-        console.log(this.props.id)
+        console.log(this.props)
         return (
             <View style={[styles.container, cardstyle.shadow]}>
                 <Delete deleteCard={() => this.props.deleteCard(this.props.index, this.props.id)}></Delete>

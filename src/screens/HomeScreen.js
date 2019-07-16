@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux'
 import NewSet from '../components/NewSet'
+import SetCard from '../containers/SetCard'
 
 
 
@@ -16,7 +17,7 @@ class HomeScreen extends Component {
 
     _renderItem = ({ item, index }) => {
         return (
-            <View><Text>Sets</Text></View>
+           <View><SetCard /></View> 
         );
     }
 
