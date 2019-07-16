@@ -34,16 +34,25 @@ class Flashcard extends Component {
 
     updateTerm(term) {
         this.setState({ term: term });
-        this.props.updateCard({ term: term, definition: this.state.definition, index: this.props.index })
+        this.props.updateCard({
+            term: term,
+            definition: this.state.definition,
+            index: this.props.index,
+            id: this.props.id
+        })
     }
 
     updateDefinition(def) {
         this.setState({ definition: def });
-        this.props.updateCard({ term: this.state.term, definition: def, index: this.props.index })
+        this.props.updateCard({
+            term: this.state.term,
+            definition: def,
+            index: this.props.index,
+            id: this.props.id
+        })
     }
 
     render() {
-        console.log(this.props)
         return (
             <View style={[styles.container, cardstyle.shadow]}>
                 <Delete deleteCard={() => this.props.deleteCard(this.props.index, this.props.id)}></Delete>

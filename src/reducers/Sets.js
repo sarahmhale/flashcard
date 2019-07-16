@@ -2,7 +2,6 @@ import Card from './Card'
 
 
 const Sets = (state = [], action) => {
-    console.log(action)
     if (typeof action.id !== 'undefined') {
         return {
             ...state,

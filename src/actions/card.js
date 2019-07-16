@@ -12,6 +12,7 @@ export const addCard = (card) => ({
 export const updateCard = action => ({
     type: UPDATE_CARD,
     index: action.index,
+    id: action.id,
     item: { term: action.term, definition: action.definition }
 })
 
