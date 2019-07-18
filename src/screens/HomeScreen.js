@@ -12,12 +12,13 @@ import SetCard from '../containers/SetCard'
 
 
 class HomeScreen extends Component {
+    static navigationOptions = { header: null }
 
     _keyExtractor = (item, index) => "key" + index;
 
     _renderItem = ({ item, index }) => {
         return (
-           <View><SetCard /></View> 
+            <View><SetCard /></View>
         );
     }
 

@@ -1,4 +1,4 @@
-1. Problem med uppdatera text på kort 
-2. Skapa en kortstil
-3. titel på kortet
-4. boyscoutakoden
+
+Skapa en kortstil
+titel på kortet
+boyscoutakoden

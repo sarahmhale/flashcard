@@ -4,7 +4,10 @@ import CreateSet from './src/screens/CreateSet'
 
 const AppNavigator = createStackNavigator(
     {
-        Home: HomeScreen,
+        Home: {
+            screen: HomeScreen,
+
+        },
         CreateCards: CreateSet
     }, {
         initialRouteName: "Home"
