@@ -8,6 +8,7 @@ import {
 import { connect } from 'react-redux'
 import NewSet from '../components/NewSet'
 import SetCard from '../containers/SetCard'
+import Header from '../components/Header'
 
 
 
@@ -16,7 +17,7 @@ class HomeScreen extends Component {
 
     _keyExtractor = (item, index) => "key" + index;
 
-    _renderItem = ({ item, index }) => {
+    _renderItem = () => {
         return (
             <View><SetCard /></View>
         );
@@ -30,6 +31,7 @@ class HomeScreen extends Component {
                     extraData={this.state}
                     keyExtractor={this._keyExtractor}
                     renderItem={this._renderItem}
+                    ListHeaderComponent={<Header />}
                     ListFooterComponent={<NewSet />}
                 />
             </View>

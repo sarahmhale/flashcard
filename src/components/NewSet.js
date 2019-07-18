@@ -25,7 +25,7 @@ class NewSet extends Component {
                 }
             >
                 <View>
-                    <Ionicons name="md-add-circle" size={42} color={COLORS.focused} />
+                    <Ionicons name="md-add-circle" size={42} color={COLORS.secondary} />
                 </View>
 
             </TouchableOpacity>

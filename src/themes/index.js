@@ -1,7 +1,7 @@
 export const COLORS = {
-    focused: '#F25F5C',
-    unfocused: '#444',
-    dark: '#444'
+    dark: '#333333',
+    secondary: "#FA4C31",
+    primary: "#3339A7"
 }
 
 
