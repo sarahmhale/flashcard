@@ -3,12 +3,12 @@ import {
     View,
     StyleSheet,
     FlatList,
-    Text
 } from 'react-native';
 import { connect } from 'react-redux'
 import NewSet from '../components/NewSet'
 import SetCard from '../containers/SetCard'
 import Header from '../components/Header'
+import { COLORS } from '../themes';
 
 
 
@@ -25,17 +25,18 @@ class HomeScreen extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <FlatList
-                    data={Object.keys(this.props.sets)}
-                    extraData={this.state}
-                    keyExtractor={this._keyExtractor}
-                    renderItem={this._renderItem}
-                    ListHeaderComponent={<Header />}
-                    ListFooterComponent={<NewSet />}
-                />
+            <View>
+                <Header />
+                <View style={styles.container}>
+                    <FlatList
+                        data={Object.keys(this.props.sets)}
+                        extraData={this.state}
+                        keyExtractor={this._keyExtractor}
+                        renderItem={this._renderItem}
+                        ListFooterComponent={<NewSet />}
+                    />
+                </View>
             </View>
-
         )
     }
 }
@@ -49,8 +50,10 @@ export default connect(mapStateToProps)(HomeScreen)
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        marginTop: 24,
+        borderRadius: 30,
         width: '100%',
-        backgroundColor: '#fff'
+        height: '100%',
+        backgroundColor: COLORS.primary
     },
 });

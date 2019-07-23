@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
         color: COLORS.dark,
         fontSize: 28,
         fontWeight: '500',
-        color: COLORS.primary
+
     },
     headerContainer: {
         margin: 16,

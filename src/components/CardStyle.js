@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 
 export const cardstyle = StyleSheet.create({
     shadow: {
+        borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
             width: 1,
