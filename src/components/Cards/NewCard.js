@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import { COLORS } from '../themes'
+import { COLORS } from '../../themes'
 import { Ionicons } from '@expo/vector-icons';
 import { cardstyle } from './CardStyle'
 import { connect } from 'react-redux'
-import { addCard } from '../actions'
+import { addCard } from '../../actions'
 
 class AddFlashcard extends Component {
     render() {

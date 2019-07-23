@@ -8,7 +8,7 @@ import {
 import { connect } from 'react-redux'
 import Flashcard from '../containers/Flashcard'
 import InputField from '../components/InputField';
-import NewCard from '../components/NewCard'
+import NewCard from '../components/Cards/NewCard'
 
 
 class CreateSet extends Component {

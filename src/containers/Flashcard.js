@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
 import { connect } from 'react-redux'
 import InputField from '../components/InputField'
-import { cardstyle } from '../components/CardStyle'
+import { cardstyle } from '../components/Cards/CardStyle'
 import { deleteCard, updateCard } from '../actions'
 import { Delete } from '../components/Buttons/Delete';
 import { COLORS } from '../themes'

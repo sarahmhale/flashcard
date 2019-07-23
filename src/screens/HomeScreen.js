@@ -5,8 +5,8 @@ import {
     FlatList,
 } from 'react-native';
 import { connect } from 'react-redux'
-import NewSet from '../components/NewSet'
-import SetCard from '../containers/SetCard'
+import NewSet from '../components/Cards/NewSet'
+import SetCard from '../components/Cards/SetCard'
 import Header from '../components/Header'
 import { COLORS } from '../themes';
 
