@@ -13,8 +13,8 @@ export default class Header extends React.Component {
                 <Text style={styles.smallTxt}>Hey!</Text>
                 <Text style={styles.bigTxt}>
                     Let's Study!
-                    <Emoji name="woman-lifting-weights" style={{ fontSize: 14 }} />
-                    <Emoji name="books" style={{ fontSize: 14 }} />
+                    <Emoji name="woman-lifting-weights" style={{ fontSize: 28 }} />
+                    <Emoji name="books" style={{ fontSize: 28 }} />
                 </Text>
             </View>
         )
@@ -24,13 +24,18 @@ export default class Header extends React.Component {
 export const styles = StyleSheet.create({
 
     smallTxt: {
+        fontSize: 18,
+        fontWeight: '500',
         color: COLORS.secondary
     },
     bigTxt: {
-        color: COLORS.dark
+        color: COLORS.dark,
+        fontSize: 28,
+        fontWeight: '500',
+        color: COLORS.primary
     },
     headerContainer: {
         margin: 16,
-        marginTop: 36
+        marginTop: 60
     }
 });
