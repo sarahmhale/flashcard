@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { COLORS } from '../themes';
+import { COLORS } from '../../themes';
 import Emoji from 'react-native-emoji';
 
 

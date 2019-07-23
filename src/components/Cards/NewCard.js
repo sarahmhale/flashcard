@@ -15,7 +15,7 @@ class AddFlashcard extends Component {
                 onPress={() => this.props.addCard({ id: this.props.id })}
             >
                 <View>
-                    <Ionicons name="md-add-circle" size={42} color={COLORS.focused} />
+                    <Ionicons name="md-add-circle" size={42} color={COLORS.secondary} />
                 </View>
 
             </TouchableOpacity>

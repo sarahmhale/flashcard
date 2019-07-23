@@ -7,7 +7,7 @@ import {
 import { connect } from 'react-redux'
 import NewSet from '../components/Cards/NewSet'
 import SetCard from '../components/Cards/SetCard'
-import Header from '../components/Header'
+import Header from '../components/Headers/Header'
 import { COLORS } from '../themes';
 
 
